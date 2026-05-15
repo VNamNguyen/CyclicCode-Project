@@ -3,11 +3,11 @@
 ## 1. Thông tin sinh viên thực hiện
 Dưới đây là danh sách thành viên nhóm tham gia xây dựng chương trình cho Part #2:
 
-| STT | Họ và tên | Mã sinh viên | Vai trò |
-|:---:|:---|:---:|:---|
-| 1 | **Nguyễn Văn Nam** | **B24DCCN411** | Nhóm trưởng |
-| 2 | **Lê Hải Biên** | **B24DCCN064** | Thành viên |
-| 3 | **Đặng Mạnh Đạt** | **B24DCCN104** | Thành viên |
+| STT | Họ và tên | Mã sinh viên |
+|:---:|:---|:---:|
+| 1 | **Nguyễn Văn Nam** | **B24DCCN411** |
+| 2 | **Lê Hải Biên** | **B24DCCN064** |
+| 3 | **Đặng Mạnh Đạt** | **B24DCCN104** | 
 
 ## 2. Mô tả đề tài (Part #2)
 Chương trình thực hiện mô phỏng thuật toán mã hóa mã vòng tuyến tính $C(n, k)$ với yêu cầu cụ thể:
