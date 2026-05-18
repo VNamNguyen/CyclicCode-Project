@@ -1,0 +1,26 @@
+==================================================
+XU LY BO TEST MOI
+
+[BONUS] --- GIAI THICH CHI TIET THUAT TOAN NHAN ---
+* Thong so: Ma vong C(n=5, k=4)
+* Da thuc kiem tra h(x) = 1 + x + x^2 + x^3
+* Da thuc ban tin m(x)  = 1 + x^2 + x^3
+--------------------------------------------------
+BUOC 1: Xay dung phan ban tin cho tu ma he thong.
+- Trong ma he thong, ban tin m(x) duoc giu nguyen va dat vao k vi tri bac cao nhat.
+- Tuong duong viec tinh x^(n-k) * m(x).
+  -> Gan c_1 = m_0 = 1
+  -> Gan c_2 = m_1 = 0
+  -> Gan c_3 = m_2 = 1
+  -> Gan c_4 = m_3 = 1
+
+BUOC 2: Tinh (n-k) bit kiem tra (parity bits).
+- Su dung he thuc truy hoi tu da thuc kiem tra h(x):
+  c_p = SUM(h_j * c_{p + k - j}) voi j chay tu 0 den k-1
+- Tinh tuong tu viec dich bit qua thanh ghi lfsr:
+  => Tinh c_0:
+     c_0 = c_4(=1) + c_3(=1) + c_2(=0) + c_1(=1) = 1
+--------------------------------------------------
+[KET QUA] Da thuc tu ma hoan chinh c(x) = 1 + x + x^3 + x^4
+
+=> Vector tu ma: 1 1 0 1 1

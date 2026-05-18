@@ -1,0 +1,36 @@
+==================================================
+XU LY BO TEST MOI
+
+[BONUS] --- GIAI THICH CHI TIET THUAT TOAN NHAN ---
+* Thong so: Ma vong C(n=12, k=8)
+* Da thuc kiem tra h(x) = 1 + x^4
+* Da thuc ban tin m(x)  = 1 + x^2 + x^4 + x^6
+--------------------------------------------------
+BUOC 1: Xay dung phan ban tin cho tu ma he thong.
+- Trong ma he thong, ban tin m(x) duoc giu nguyen va dat vao k vi tri bac cao nhat.
+- Tuong duong viec tinh x^(n-k) * m(x).
+  -> Gan c_4 = m_0 = 1
+  -> Gan c_5 = m_1 = 0
+  -> Gan c_6 = m_2 = 1
+  -> Gan c_7 = m_3 = 0
+  -> Gan c_8 = m_4 = 1
+  -> Gan c_9 = m_5 = 0
+  -> Gan c_10 = m_6 = 1
+  -> Gan c_11 = m_7 = 0
+
+BUOC 2: Tinh (n-k) bit kiem tra (parity bits).
+- Su dung he thuc truy hoi tu da thuc kiem tra h(x):
+  c_p = SUM(h_j * c_{p + k - j}) voi j chay tu 0 den k-1
+- Tinh tuong tu viec dich bit qua thanh ghi lfsr:
+  => Tinh c_3:
+     c_3 = c_11(=0) + c_7(=0) = 0
+  => Tinh c_2:
+     c_2 = c_10(=1) + c_6(=1) = 0
+  => Tinh c_1:
+     c_1 = c_9(=0) + c_5(=0) = 0
+  => Tinh c_0:
+     c_0 = c_8(=1) + c_4(=1) = 0
+--------------------------------------------------
+[KET QUA] Da thuc tu ma hoan chinh c(x) = x^4 + x^6 + x^8 + x^10
+
+=> Vector tu ma: 0 0 0 0 1 0 1 0 1 0 1 0

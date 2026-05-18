@@ -1,0 +1,34 @@
+==================================================
+XU LY BO TEST MOI
+
+[BONUS] --- GIAI THICH CHI TIET THUAT TOAN NHAN ---
+* Thong so: Ma vong C(n=13, k=12)
+* Da thuc kiem tra h(x) = 1 + x + x^2 + x^3 + x^4 + x^5 + x^6 + x^7 + x^8 + x^9 + x^10 + x^11
+* Da thuc ban tin m(x)  = x + x^3 + x^5 + x^7 + x^9 + x^11
+--------------------------------------------------
+BUOC 1: Xay dung phan ban tin cho tu ma he thong.
+- Trong ma he thong, ban tin m(x) duoc giu nguyen va dat vao k vi tri bac cao nhat.
+- Tuong duong viec tinh x^(n-k) * m(x).
+  -> Gan c_1 = m_0 = 0
+  -> Gan c_2 = m_1 = 1
+  -> Gan c_3 = m_2 = 0
+  -> Gan c_4 = m_3 = 1
+  -> Gan c_5 = m_4 = 0
+  -> Gan c_6 = m_5 = 1
+  -> Gan c_7 = m_6 = 0
+  -> Gan c_8 = m_7 = 1
+  -> Gan c_9 = m_8 = 0
+  -> Gan c_10 = m_9 = 1
+  -> Gan c_11 = m_10 = 0
+  -> Gan c_12 = m_11 = 1
+
+BUOC 2: Tinh (n-k) bit kiem tra (parity bits).
+- Su dung he thuc truy hoi tu da thuc kiem tra h(x):
+  c_p = SUM(h_j * c_{p + k - j}) voi j chay tu 0 den k-1
+- Tinh tuong tu viec dich bit qua thanh ghi lfsr:
+  => Tinh c_0:
+     c_0 = c_12(=1) + c_11(=0) + c_10(=1) + c_9(=0) + c_8(=1) + c_7(=0) + c_6(=1) + c_5(=0) + c_4(=1) + c_3(=0) + c_2(=1) + c_1(=0) = 0
+--------------------------------------------------
+[KET QUA] Da thuc tu ma hoan chinh c(x) = x^2 + x^4 + x^6 + x^8 + x^10 + x^12
+
+=> Vector tu ma: 0 0 1 0 1 0 1 0 1 0 1 0 1
